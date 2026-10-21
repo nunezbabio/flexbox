@@ -3,6 +3,8 @@
     --color-a: steelblue;
     --color-a--hover: red;
 
+    --bg-img--marca-agua: url(./assets/svg/mn.svg);
+
     --bg-img-galeria-1: url("https://cdn.pixabay.com/photo/2017/11/11/21/55/freedom-2940655_1280.jpg");
     --bg-img-galeria-2: url("https://cdn.pixabay.com/photo/2016/11/13/12/52/kuala-lumpur-1820944_1280.jpg");
     --bg-img-galeria-3: url("https://cdn.pixabay.com/photo/2018/05/09/22/51/blue-sky-3386409_1280.jpg");
@@ -10,6 +12,27 @@
     --bg-img-galeria-5: url("https://cdn.pixabay.com/photo/2020/06/28/00/04/chicago-5347435_1280.jpg");
 
     --bg-img-galeria-portada: url(https://cdn.pixabay.com/photo/2020/02/09/13/08/banner-4833105_960_720.jpg);
+
+    --logo-ratio: 200/105;
+    --marca-agua: 5rem;
+}
+
+.agua {
+    &::before {
+        position: fixed;
+        content: "";
+        height: calc(var(--marca-agua) * var(--logo-ratio));
+        width: var(--marca-agua);
+        bottom: 1rem;
+        right: 1rem;
+
+        background-image: var(--bg-img--marca-agua);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        opacity: 0.2;
+    }
 }
 
 html,
