@@ -1,7 +1,13 @@
 :root {
     /* colores del sitio */
+    --color-1: #620202;
+    --color-2: blue;
+
+    --color-texto: red;
+    --color-: #fefefe;
+
     --color-a: steelblue;
-    --color-a--hover: red;
+    --color-a--hover: lime;
 
     --bg-img--marca-agua: url(./assets/svg/mn.svg);
 
@@ -15,6 +21,41 @@
 
     --logo-ratio: 200/105;
     --marca-agua: 5rem;
+}
+
+/* Underline From Center */
+.pepe {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 51%;
+        right: 51%;
+        bottom: 0;
+        background: #2098d1;
+        height: 4px;
+        -webkit-transition-property: left, right;
+        transition-property: left, right;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+
+    &:hover::before,
+    &:focus::before,
+    &:active::before {
+        left: 0;
+        right: 0;
+    }
 }
 
 .agua {
@@ -64,6 +105,28 @@ ul {
     }
 }
 
+/* colores en los textos*/
+
+body,
+a,
+li,
+span {
+    color: var(--color-texto);
+}
+
+h3 {
+    color: var(--color-1);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-2);
+
+    &::hover {
+        color: var(--color-a--hover);
+    }
+}
+
 /*Ejemplo de usp de la prefijo (:not) */
 ul:not(.enlaces-pdf) 
 /* ul */ {
@@ -79,13 +142,6 @@ ul.enlaces-pdf {
         /* background-color: lime; */
         /* margin: 0.5rem 0; */
         line-height: 2;
-        & a {
-            color: var(--color-a);
-
-            &:hover {
-                color: var(--color-a--hover);
-            }
-        }
     }
 }
 
