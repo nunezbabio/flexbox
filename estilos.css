@@ -429,7 +429,7 @@ article.carrousel-container {
     }
 }
 
-@media (min-width: 480) {
+@media (min-width: 480px) {
     article.carrousel-container {
         & ul.carrousel {
             & li:nth-child(1) figure::before {
