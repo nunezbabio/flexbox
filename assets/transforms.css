@@ -1,0 +1,124 @@
+/* Galeria Transition */
+
+ul.transformers {
+    /* Parrilla flexbox */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1.2rem;
+
+    margin: 1rem 0;
+    padding: 1.2rem;
+
+    background-color: #fff;
+    border: 1px solid lightgrey;
+    border-radius: 0.8rem;
+
+    & li {
+        padding: 1.6rem 2.4rem;
+
+        text-align: center;
+        font-size: 0.8rem;
+
+        background-color: ghostwhite;
+        border-radius: 0.7rem;
+
+        & span {
+            /* background-color: lime; */
+        }
+
+        & figure {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 5rem;
+            height: 5rem;
+            margin-top: 0.5rem;
+
+            background-color: royalblue;
+            box-shadow: none;
+
+            border-radius: 5px;
+
+            & figcaption {
+                font-weight: 700;
+                font-size: larger;
+                color: #fff;
+            }
+        }
+    }
+
+    & li {
+        & figure {
+            transition:
+                transform 0.5s ease,
+                box-shadow 0.5s ease;
+        }
+
+        &:hover figure {
+            &.translateX {
+                transform: translateX(2rem);
+            }
+            &.translateY {
+                transform: translateY(2rem);
+            }
+            &.translate {
+                transform: translate(2rem, 2rem);
+            }
+
+            &.rotate45 {
+                transform: rotate(45deg);
+            }
+            &.rotate-90 {
+                transform: rotate(-90deg);
+            }
+            &.rotate360 {
+                transform: rotate(1turn);
+            }
+
+            &.scaleX {
+                transform: scaleX(1.5);
+            }
+            &.scaleY {
+                transform: scaleY(0.5);
+            }
+            &.scale {
+                transform: scale(1.2);
+            }
+
+            &.skewX {
+                transform: skewX(25deg);
+            }
+            &.skewY {
+                transform: skewY(25deg);
+            }
+            &.skew {
+                transform: skew(20deg, 10deg);
+            }
+
+            &.origin-center {
+                transform-origin: center;
+            }
+            &.origin-top-left {
+                transform-origin: top left;
+            }
+            &.origin-bottom-right {
+                transform-origin: bottom right;
+            }
+
+            &.translate-rotate {
+                transform: translateX(2rem) rotate(45deg);
+            }
+
+            &.rotate-translate {
+                transform: rotate(45deg) translateX(2rem);
+            }
+
+            &.combina3 {
+                transform: translateX(0.8rem) rotate(10deg) scale(1.2);
+                box-shadow: 0 1.25rem 2rem #00000080;
+            }
+        }
+    }
+}
