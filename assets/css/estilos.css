@@ -109,7 +109,8 @@ small,
 footer ul li a {
     font-size: var(--font-size-mini);
 }
-s .wu-transition-color {
+
+.wu-transition-color {
     width: 10rem;
     height: 10rem;
     background-color: steelblue;

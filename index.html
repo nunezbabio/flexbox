@@ -21,22 +21,28 @@
         <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css" />
 
         <!-- Hover.css de ianlunn GitHub -->
-        <link rel="stylesheet" href="assets/hover.css" />
+        <link rel="stylesheet" href="assets/css/hover.css" />
 
-        <!-- Ruta a las hojas de estilos -->
-        <link rel="stylesheet" href="assets/estilos.css" />
+        <!-- Ruta a las hojas de visibilidad -->
+        <link rel="stylesheet" href="assets/css/visibilidad.css" />
 
         <!-- Ruta de hoja de images -->
-        <link rel="stylesheet" href="assets/images.css" />
+        <link rel="stylesheet" href="assets/css/images.css" />
 
         <!-- Ruta de la hoja queries -->
-        <link rel="stylesheet" href="assets/queries.css" />
+        <link rel="stylesheet" href="assets/css/queries.css" />
 
         <!-- Ruta de la hoja transforms -->
-        <link rel="stylesheet" href="assets/transforms.css" />
+        <link rel="stylesheet" href="assets/css/transforms.css" />
 
         <!-- Ruta de la hoja variables -->
-        <link rel="stylesheet" href="assets/variables.css" />
+        <link rel="stylesheet" href="assets//css/variables.css" />
+
+        <!-- Ruta de la hoja Menu Icon -->
+        <link rel="stylesheet" href="assets/css/menuIcon.css" />
+
+        <!-- Ruta a las hojas de estilos -->
+        <link rel="stylesheet" href="assets/css/estilos.css" />
 
         <!-- Título de la pestaña del navegador -->
         <title>UF1303 | Elaboración de hojas de estilos</title>
@@ -44,12 +50,42 @@
 
     <body>
         <header></header>
-        <nav></nav>
+        <nav class="principal" aria-label="Navegación principal">
+            <h2 class="pechado">Menú Principal</h2>
+
+            <input id="icon-menu" name="icon-menu" type="checkbox" />
+
+            <label for="icon-menu" class="icon-menu" aria-label="Abrir/Cerrar menú">Menú</label>
+
+            <ul>
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="#">Temas</a>
+                    <ul>
+                        <li>
+                            <a href="#">Textos</a>
+                        </li>
+                        <li>
+                            <a href="#">Imagenes</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Nosotros</a>
+                </li>
+                <li>
+                    <a href="#">Contacto</a>
+                </li>
+            </ul>
+        </nav>
         <main class="agua">
             <section>
                 <header class="img-before portada">
                     <h2>Imágenes en CSS</h2>
                 </header>
+
                 <article>
                     <h3>Referencias teóricas</h3>
                     <h4>Esto es un h4</h4>
@@ -217,6 +253,7 @@
                     <button class="wu-button-queries"></button>
                 </article>
 
+                <!-- Galeria -->
                 <article class="galeria-flex">
                     <h3>Galería de imágenes</h3>
                     <p>Parrilla de imágenes con Flexbox</p>
